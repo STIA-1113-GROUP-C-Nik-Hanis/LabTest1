@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+
+public class question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner (System.in);
+		int sales;
+		int hours;
+		
+		double commission;
+		double Dwages;
+		
+		System.out.print("Enter sales         : RM" );
+		sales = sc.nextInt();
+		
+		System.out.print("Enter hours worked  : " );
+		hours = sc.nextInt();
+		
+		if ((sales >= 150) && (sales <= 300)) {
+			
+		     commission = 0.05 * sales;
+		     Dwages = ( hours * 5 ) + commission;
+		}
+		
+		else if ((sales >= 301) && (sales <= 500)) {
+			
+		     commission = 0.10 * sales;
+		     Dwages = ( hours * 5 ) + commission;
+		}
+		else {
+			
+			 commission = 0.15 * sales;
+		     Dwages = ( hours * 5 ) + commission;
+		}
+		
+		System.out.println(" ");
+		System.out.println("Commission          : RM" + commission );
+		System.out.println("Daily wages         : RM" + Dwages );
+		
+		sc.close();
+	}
+
+}
