@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class LabTest1 {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+				Scanner cM = new Scanner (System.in);
+			
+		        int item = 1;
+		        double price1;
+		        int quantity1;
+		        double price2;
+		        int quantity2;
+		        double price3;
+		        int quantity3;
+	 
+		        double totalprice = 0;
+		        double discount = 0;
+		        double paidprice = 0;
+		        
+				    System.out.print("Enter the number of items: "); 
+				    item = cM.nextInt();
+				
+				    while (item <4) {
+				          System.out.print("Enter price of first item: RM");
+		              price1 = cM.nextInt();
+		        
+		              System.out.print("Enter quantity of first item: ");
+		              quantity1 = cM.nextInt();
+		        
+		              System.out.println();
+		        
+		              System.out.print("Enter price of second item: RM");
+		              price2 = cM.nextInt();
+		        
+		              System.out.print("Enter quantity of first item: ");
+		              quantity2 = cM.nextInt();
+		        
+		              System.out.println();
+		        
+		              System.out.print("Enter price of third item: RM");
+		              price3 = cM.nextInt();
+		       
+		              System.out.print("Enter quantity of third item: ");
+		              quantity3 = cM.nextInt();
+		        
+		              System.out.println();
+		        
+                  double totalprice1 = price1 * quantity1;
+		              double totalprice2 = price2 * quantity2;
+		              double totalprice3 = price3 * quantity3;
+		              totalprice = totalprice1 + totalprice2 + totalprice3;
+		        
+		        
+                  if (totalprice > 100 ) {
+                      discount = 0.2 * totalprice;}
+                      else {
+                      discount = 0.1 * totalprice;}
+
+
+                  paidprice = totalprice - discount;
+
+          item++;
+          }
+
+          System.out.print("Total price         : RM" + totalprice);
+          System.out.println("\nDiscount received   : RM" + discount);
+          System.out.println("Price to be paid    : RM" + paidprice);
+
+          cM.close();
+		        
+	}
+
+	}
+
+
